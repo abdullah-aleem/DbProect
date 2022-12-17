@@ -1,0 +1,35 @@
+.lcard{
+    background-color: violet;
+    height: 600px;; 
+    width:1000px;
+    border-radius: 15px;
+    display:flex;
+    
+}
+.startp{
+    background-color: silver;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.lpic{
+background-color: blue;
+    flex: 1;
+    
+}
+.lform{
+    height:100%;
+    background-color:  white;
+    flex:1;
+display: flex;
+align-items: center;
+    justify-content: center;
+}
+
+.lpswrd{
+width: 100%;
+}
+.lemail{
+width: 100%;
+}
