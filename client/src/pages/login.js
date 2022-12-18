@@ -58,7 +58,6 @@ export default class Login extends React.Component {
 
 }
 function loginFunction(state) {
-    console.log("here")
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
