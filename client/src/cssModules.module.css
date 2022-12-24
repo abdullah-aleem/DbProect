@@ -22,9 +22,9 @@ background-color: blue;
     height:100%;
     background-color:  white;
     flex:1;
-display: flex;
+    display: flex;
     align-items: center;
-        justify-content: center;
+    justify-content: center;
 }
 
 .lpswrd{

@@ -1,7 +1,9 @@
 import React from 'react';
-import styles from '../cssModules.module.css'
+import
 
-import { Redirect } from "react-router-dom"
+styles from '../cssModules.module.css'
+
+import { Navigate } from "react-router-dom"
 
 export default class Login extends React.Component { 
 
@@ -10,14 +12,30 @@ export default class Login extends React.Component {
         this.state = {
             username: "",
             password: "",
+            auth:false,
 
         }  
         
 
     }
+    loginFunction(state) {
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(state)
+    };
+    fetch('http://localhost:5000/', requestOptions)
+        .then(response => response.json())
+        .then(data => {
+            if (data) {
+                this.setState({ auth: true });
+            }
+        });
+    }
+
     submit() {
         console.log("start")
-        loginFunction(this.state)
+        this.loginFunction(this.state)
     }
     render() { 
         return (
@@ -27,7 +45,7 @@ export default class Login extends React.Component {
                             hello
                     </div>
                     <div className={styles.lform}>
-                       
+                        {this.state.auth ? <Navigate to='/ds' />:""}
                             <li>
                                 <ul>
                                 <input type="email" className={styles.lemail} value={this.state.username} onChange={ (e)=>this.setState({username:e.target.value})} />   
@@ -56,19 +74,5 @@ export default class Login extends React.Component {
     }
 
 
-}
-function loginFunction(state) {
-    const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(state)
-    };
-    fetch('http://localhost:5000/', requestOptions)
-        .then(response => response.json())
-        .then(data => {
-            if (data) {
-                <Redirect to='/ds'/>
-            }
-        });
 }
 
