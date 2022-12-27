@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../cssModules.module.css'
 
-import { Redirect } from "react-router-dom"
+// import { Redirect } from "react-router-dom"
 
 export default class Login extends React.Component { 
 
@@ -11,9 +11,7 @@ export default class Login extends React.Component {
             username: "",
             password: "",
 
-        }  
-        
-
+        }    
     }
     submit() {
         console.log("start")
@@ -21,38 +19,49 @@ export default class Login extends React.Component {
     }
     render() { 
         return (
-            <div className={styles.startp}>
-                <div className={styles.lcard}>
-                    <div className={styles.lpic}>
-                            hello
-                    </div>
-                    <div className={styles.lform}>
-                       
-                            <li>
-                                <ul>
-                                <input type="email" className={styles.lemail} value={this.state.username} onChange={ (e)=>this.setState({username:e.target.value})} />   
+            <div className="background container" style={{backgroundColor: "Pink",
+                                                        backgroundImage: "url('https://images.pexels.com/photos/6693655/pexels-photo-6693655.jpeg?auto=compress&cs=tinysrgb&w=600')",
+                                                          height: 608,display:'block',alignItems:"center",
+                                                          justifyContent:"center"}}>
+                <h1 style={{color:"white",fontFamily:'cursive'}}>Salary Management System </h1>
+               
+    
+                <div style={{backgroundColor:"black",width:"30%",height:300,
+                            borderRadius: 15,marginTop:"10%",
+                            marginLeft: "35%",display:'flex',alignItems:"center",
+                            justifyContent:"center"}}>
+                    
+                        <form>
+                        <input type="text"  placeholder="Username"
+                                            autoFocus
+                                            style={{padding: "5px", fontWeight:"bold",
+                                            fontFamily:'Hanalei Fill',
+                                            height: 17, width: "100%",
+                                            borderColor: 'black', borderWidth: 2,
+                                            borderRadius: 10,  marginBottom: 10,
+                                            fontSize: 12,}}
+                                            value={this.state.username} onChange={(e) => this.setState({username:e.target.value})} /><br/>
+                        <input type="password" placeholder="Password"
+                                                style={{padding:"5px",fontFamily:'Hanalei Fill',
+                                                fontWeight: "bold",height: 17,
+                                                width: "100%", borderColor: 'black',
+                                                borderWidth: 2, borderRadius: 10,
+                                                marginBottom: 10, fontSize: 12}}
+                                                value={this.state.password} onChange={(e) => this.setState({password:e.target.value})} /><br/>
+                        <button onClick={this.submit}  style={{backgroundColor: "DeepRed",
+                                                                    height: 35, width: "110%",paddingRight:"100px",
+                                                                    borderColor: 'black', fontFamily:'Hanalei Fill',
+                                                                    borderWidth: 2, borderRadius: 10,fontWeight:"bold",
+                                                                    marginBottom: 10, fontSize: 14}}>{"Submit"} </button>
+                  
+                        </form>
+                        </div>
+                        </div> 
+                
+          
 
-                                </ul>
-                                <ul>
-                                <input type="password" className={styles.lpswrd} value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} />
-
-                            </ul>
-                            <ul>
-                                <button onClick={()=>this.submit()}>Submit</button>
-                            </ul>
-
-
-                            </li>
-                               
-
-                            
-
-                        
-                     
-                    </div>
-               </div>
-            </div>
         )
+      
     }
 
 
@@ -68,7 +77,7 @@ function loginFunction(state) {
         .then(response => response.json())
         .then(data => {
             if (data) {
-                <Redirect to='/ds'/>
+                // <Redirect to='/ds'/>
             }
         });
 }
