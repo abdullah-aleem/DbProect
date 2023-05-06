@@ -1,11 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import Login from './pages/login';
-import dashboard_A from './pages/dashboard_A';
+import Dashboard_E from './pages/dashboard_E';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import dashboard_E from './pages/dashboard_E';
-import Dashboard_E from './pages/dashboard_E';
+
 
 
 function App() {

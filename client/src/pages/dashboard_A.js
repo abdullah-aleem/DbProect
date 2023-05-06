@@ -54,12 +54,16 @@ export default class Dashboard_A extends React.Component {
                     borderColor: 'black', fontFamily:'cursive',color:"white",
                     borderWidth: 2, borderRadius: 10,fontWeight:"bold"}} >Register Employee</button>
                         )} position="top">
-                    <div style={{height:230,width:300,backgroundColor:"whitesmoke",borderWidth:20,
-                                 borderRadius:10,padding:"20px"}}>
+                    <div style={{height:320,width:300,backgroundColor:"whitesmoke",borderWidth:20,
+                                 borderRadius:10,padding:"25px"}}>
             
             <label style={{fontFamily:"cursive",fontWeight:"bold"}}>Employee_ID</label><br/>
             <input type="text" style={{fontFamily:"cursive",borderRadius:5}}/><br/>
             <label style={{fontFamily:"cursive",fontWeight:"bold"}}>Employee Name</label><br/>
+            <input type="text" style={{fontFamily:"cursive",borderRadius:5}}/><br/>
+            <label style={{fontFamily:"cursive",fontWeight:"bold"}}>Username</label><br/>
+            <input type="text" style={{fontFamily:"cursive",borderRadius:5}}/><br/>
+            <label style={{fontFamily:"cursive",fontWeight:"bold"}}>Password</label><br/>
             <input type="text" style={{fontFamily:"cursive",borderRadius:5}}/><br/>
             <label style={{fontFamily:"cursive",fontWeight:"bold"}}>Designation</label><br/>   
             <input type="text" style={{fontFamily:"cursive",borderRadius:5}}/><br/>
@@ -75,7 +79,7 @@ export default class Dashboard_A extends React.Component {
                     borderColor: 'black', fontFamily:'cursive',color:"white",
                     borderWidth: 2, borderRadius: 10,fontWeight:"bold"}} >Attendance Management</button>
                         )} position="top">
-                    <div style={{height:200,width:300,backgroundColor:"whitesmoke",borderWidth:20,
+                    <div style={{height:150,width:300,backgroundColor:"whitesmoke",borderWidth:20,
                                  borderRadius:10,padding:"20px"}}>
             
             <label style={{fontFamily:"cursive",fontWeight:"bold"}}>Employee_ID</label><br/>
@@ -92,14 +96,12 @@ export default class Dashboard_A extends React.Component {
                     borderColor: 'black', fontFamily:'cursive',color:"white",
                     borderWidth: 2, borderRadius: 10,fontWeight:"bold"}} >Salary Management</button>
                         )} position="top">
-                    <div style={{height:200,width:300,backgroundColor:"whitesmoke",borderWidth:20,
+                    <div style={{height:150,width:300,backgroundColor:"whitesmoke",borderWidth:20,
                                  borderRadius:10,padding:"20px"}}>
             
             <label style={{fontFamily:"cursive",fontWeight:"bold"}}>Employee_ID</label><br/>
             <input type="text" style={{fontFamily:"cursive",borderRadius:5}}/><br/>
             <label style={{fontFamily:"cursive",fontWeight:"bold"}}>Month/Year</label><br/>
-            <input type="text" style={{fontFamily:"cursive",borderRadius:5}}/><br/>
-            <label style={{fontFamily:"cursive",fontWeight:"bold"}}>Total Salary</label><br/>   
             <input type="text" style={{fontFamily:"cursive",borderRadius:5}}/><br/>
             <button style={{backgroundColor:"gray",fontFamily:"cursive",fontWeight:"bold",
                             borderRadius:5,padding:"4px",width:200,marginTop:15}}>Upgrade</button>
